@@ -7,9 +7,13 @@ import sys
 def match_pattern(input_line, pattern):
     if len(pattern) == 1:
         return pattern in input_line
-    if pattern == '\\d':
+    if pattern == str('\\d'):
         for character in input_line:
             if character.isdigit():
+                return True
+    if pattern == str('\\w'):
+        for character in input_line:
+            if character.isalnum():
                 return True
     else:
         raise RuntimeError(f"Unhandled pattern: {pattern}")
