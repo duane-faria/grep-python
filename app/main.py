@@ -1,7 +1,7 @@
 import sys
 
-# import pyparsing - available if you need it!
-# import lark - available if you need it!
+#import pyparsing #- available if you need it!
+#import lark #- available if you need it!
 
 
 def match_pattern(input_line, pattern):
@@ -23,10 +23,10 @@ def main():
     print("Logs from your program will appear here!")
 
     # Uncomment this block to pass the first stage
-    # if match_pattern(input_line, pattern):
-    #     exit(0)
-    # else:
-    #     exit(1)
+    if match_pattern(input_line, pattern):
+        exit(0)
+    else:
+        exit(1)
 
 
 if __name__ == "__main__":
