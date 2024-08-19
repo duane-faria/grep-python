@@ -15,8 +15,13 @@ def match_pattern(input_line, pattern):
         for character in input_line:
             if character.isalnum():
                 return True
+    if pattern[0] == '[' and pattern[len(pattern)-1] == ']':
+        characters = pattern[1:len(pattern)-1]
+        for c in characters:
+            if c in input_line:
+                return True
     else:
-        raise RuntimeError(f"Unhandled pattern: {pattern}")
+       return False
 
 
 def main():
